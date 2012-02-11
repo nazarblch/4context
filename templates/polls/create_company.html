@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+
+
+<body>
+create company<br>{% csrf_token %} 
+    <form action="/polls/company/" method="post" name="company_form"><br>
+         <input name="meth" type="text" value="1" /><br>
+    	 <input name="strategy" type="text" value="strategy" /><br>
+         <input name="mxprice" type="text" value="12.3" /><br>
+         <input name="avprice" type="text" value="4.5" /><br>
+         <input name="weeklimit" type="text" value="23" /><br>
+         <input name="weekclicks" type="text" value="34" /><br>
+         <input name="login" type="text" value="login" /><br>
+         <input name="name" type="text" value="name" /><br>
+         <input name="fio" type="text" value="fio" /><br>
+         <input name="email" type="text" value="email@yandex.ru" /><br>
+         <input name="contextlimitsum" type="text" value="60" /><br>
+         <input name="contextpricepercent" type="text" value="60" /><br>
+         <input name="RelevantPhrasesBudgetLimit" type="text" value="90" /><br>
+         <input name="TimeTarget" type="text" value="1" /><br>
+         <input name="holidays" type="text" value="Yes" /><br>
+         <input name="hol_from" type="text" value="12" /><br>
+         <input name="hol_to" type="text" value="23" /><br>
+         <input name="days" type="text" value="1,2,3,4_1,2,13,14" /><br>
+         <input name="DisabledDomains" type="text" value="hren.ru,hren2.ru" /><br>
+         
+	 
+	 <input name="MinusKw" type="text" value="MinusKw" /><br>
+    	 <input name="MinusKw" type="text" value="MinusKw" /><br>
+    	 <input name="MinusKw" type="text" value="MinusKw" /><br>
+
+    	 <input name="sub" type="submit" value="sub" /><br>
+    </form>
+</body>
+
+</html>

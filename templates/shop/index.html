@@ -1,0 +1,120 @@
+{% extends "base/base.html" %}
+
+{% block head %}
+    <link  rel="stylesheet" href="/media/css/shop_style.css" />
+    <script src="/media/js/jquery.form.js"></script>
+{% endblock %}
+
+{% block document_ready %}
+
+		$("#add").click(function(event){
+				var form = $(this).parents("form");
+				var yml = $(":text[name=yml]").val();
+				var ymltype = $(":radio[name=ymltype]").val(); 
+				
+				$.ajax({							
+					type: "POST",				
+					url: "/shop/addproducts_todb/",
+					data: form.serialize(),
+					dataType: "text", 		
+					timeout: 30000,
+					
+					success: function(data) {
+						 if(data[0]!=0 || data[0]!="0"){
+                             $("#addedfiles").empty();
+							 $("#addedfiles").append(data);
+							  
+						 }else{
+							  alert(data);
+						 }
+					}
+					
+				});
+		});
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<script type="text/javascript">
+    $(".pr_row :text").live("change", function(event){
+        var pr_id = $(this).parents(".pr_row").attr("id");
+
+        var arr = {}
+        arr['csrfmiddlewaretoken'] = getCookie("csrftoken")
+
+        arr["pr_id"] = pr_id;
+        arr["pr_field"] = $(this).attr("class").substring(3);
+        arr["new_val"] = $(this).val();
+
+
+        $.post("/shop/modify_model/",
+                arr,
+                function(data) {
+                   if (data == "1"){
+                        show_alert("Modified", arr["pr_field"]+" = "+ arr["new_val"]);
+                   }else{
+                       show_alert("Error", data);
+                   }
+                }
+        );
+    });
+
+
+    $("#go").live("click", function(event){
+        var arr = {}
+        arr['csrfmiddlewaretoken'] = getCookie("csrftoken")
+
+        arr["unchecked_ids"] = "";
+        $(":checkbox[name=id]").each( function(){
+            if ( !$(this).attr("checked") )
+                arr["unchecked_ids"] += "," + $(this).val();
+        });
+
+        arr["unchecked_ids"] = arr["unchecked_ids"].substring(1);
+
+        $.post("/shop/del_unchecked_products/",
+                arr,
+                function(data) {
+                    if (data == "1"){
+                        show_alert("Go", "to next step");
+                        document.location.href = "synonyms/"
+                    }else{
+                        show_alert("Error", data);
+                    }
+                }
+        );
+
+    });
+
+
+</script>
+
+<div id="file_load">
+
+<form action="" method="post" name="form" id="file_load_form" >{% csrf_token %}
+    <label for="ymlfile">YML File URL</label><br>
+    <input name="ymlfile" id="ymlfile" type="text" value="" size="70" /><br><br>
+
+	<input type="radio" name="ymltype" value="xml" checked >XML
+    <input type="radio" name="ymltype" value="xl" >XL
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="add" name="add" type="button" value="Добавить товары" />&nbsp;
+
+		
+</form>
+
+</div>
+
+
+<div id="addedfiles">
+</div>
+
+<br>
+<input id="go" name="go" type="button" value="Далее" />
+
+{% endblock %}
+

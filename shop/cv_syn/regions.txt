@@ -1,0 +1,390 @@
+All 0
+Europe 111
+Australia and Oceania 138
+CIS (except Russia) 166
+Asia 183
+Russia 225
+Africa 241
+North America 10002
+South America 10003
+Moscow 213
+Dolgoprudniy 214
+Dubna 215
+Pushino 217
+Chernogolovka 219
+Balashiha 10716
+Voskresensk 10722
+Dmitrov 10723
+Kolomna 10734
+Krasnogorsk 10735
+Mozhaysk 10739
+Orehovo-Zuevo 10745
+Podolsk 10747
+Ramenskoe 10750
+Sergiev Posad 10752
+Serpuhov 10754
+Shelkovo 10765
+Zhukovskiy 20571
+Korolev 20728
+Fryazino 21619
+Yubileyny 21620
+Zheleznodorozhny 21622
+Ivanteevka 21623
+Klimovsk 37147
+Moscow and Moscow region 1
+Belgorod District 10645
+Bryansk District 10650
+Vladimir District 10658
+Voronezh District 10672
+Ivanovo District 10687
+Kaluga District 10693
+Kostroma District 10699
+Kursk District 10705
+Lipetsk District 10712
+Orel District 10772
+Ryazhan District 10776
+Smolensk District 10795
+Tambov District 10802
+Tver District 10819
+Tula District 10832
+Yaroslavl District 10841
+Saint-Petersburg and Leningradskaya oblast 10174
+Nenets Autonomous Okrug 10176
+Arhangelsk District 10842
+Vologda District 10853
+Kaliningrad District 10857
+Murmansk District 10897
+Novgorod District 10904
+Pskov District 10926
+Respublika Kareliya 10933
+Respublika Komi 10939
+Astrahan District 10946
+Volgograd District 10950
+Krasnodar Krai 10995
+The Republic of Adygea 11004
+The Republic of Kalmykia 11015
+Rostov District 11029
+Kirov District 11070
+Mariy El 11077
+Nizhny Novgorod District 11079
+Orenburg District 11084
+Penza District 11095
+Perm District 11108
+Bashkortostan 11111
+Mordovia 11117
+Tatarstan 11119
+Samara District 11131
+Saratov District 11146
+Udmurtiya 11148
+Ulyanovsk District 11153
+Chuvashiya 11156
+Kurgan District 11158
+Sverdlov District 11162
+Tumen District 11176
+Khanty-Mansi Autonomous Okrug 11193
+Chelyabinsk District 11225
+Yamalo-Nenets Autonomous Okrug  11232
+Altai Republic 10231
+Tyva Republic 10233
+Altai Krai 11235
+Irkutsk District 11266
+Kemerovo District 11282
+Krasnoyarsk Krai 11309
+Novosibirsk District 11316
+Omsk District 11318
+Buryat Republic 11330
+Republic of Khakassia 11340
+Tomsk District 11353
+Zabaykalsky Krai 21949
+Jewish Autonomous Region 10243
+Chukotka Autonomous Okrug 10251
+Amursk District 11375
+Kamchatka Krai 11398
+Magadan District 11403
+Primorie 11409
+The Sakha (Yakutia) Republic 11443
+Sahalin District 11450
+Khabarovsk Krai 11457
+Germany 96
+United Kingdom 102
+Austria 113
+Belgium 114
+Bulgaria 115
+Hungary 116
+Netherlands 118
+Norway 119
+Poland 120
+Slovakia 121
+Slovenia 122
+Finland 123
+France 124
+Czech Republic 125
+Switzerland 126
+Sweden 127
+Serbia 180
+Denmark 203
+Spain 204
+Italy 205
+Greece 246
+Baltic 980
+New Zealand 139
+Australia 211
+Moguilev District 29629
+Minsk District 29630
+Gomel District 29631
+Brest District 29632
+Vitebsk District 29633
+Grodno District 29634
+Akmolinsk District 29403
+Aktubinsk District 29404
+Alma-Ata District 29406
+Atyrau District 29407
+East-Kazakhstan District 29408
+Zhambylsk District 29409
+West-Kazakhstan District 29410
+Karaganda District 29411
+Kostanai District 29412
+Kyzylorda District 29413
+Mangystau District 29414
+Pavlodar District 29415
+North-Kazakhstan District 29416
+South-Kazakhstan District 29417
+Belarus 149
+Kazakhstan 159
+Azerbaijan 167
+Armenia 168
+Turkmenistan 170
+Uzbekistan 171
+Ukraine 187
+Kyrgyzstan 207
+Moldova 208
+Tajikistan 209
+Abkhasia 29386
+China 134
+South Korea 135
+Japan 137
+Georgia 169
+India 994
+Thailand 995
+Middle East 1004
+Krim 977
+West 20524
+East 20525
+South 20526
+Centre 20527
+North 20528
+Central 3
+Northwest 17
+South 26
+Volga Region 40
+Ural 52
+Siberian 59
+Far East 73
+North Kavkaz 102444
+Simferopol 146
+Sevastopol 959
+Evpatoria 11463
+Kerch 11464
+Feodosia 11469
+Yalta 11470
+Lithuania 117
+Estonia 179
+Latvia 206
+Israel 181
+United Arab Emirates 210
+Turkey 983
+Egypt 1056
+United States 84
+Canada 95
+Argentina 93
+Brazil 94
+Saint-Petersburg 2
+Vyborg 969
+Volhov 10864
+Vsevolgsk 10865
+Gatchina 10867
+Kirishi 10871
+Sosnoviy Bor 10891
+Tixvin 10892
+Belgorod 4
+Stariy Oskol 10649
+Vladimir 192
+Kovrov 10664
+Murom 10668
+Kaluga 6
+Obninsk 967
+Kursk 8
+Zheleznogorsk 10710
+Tula 15
+Novomoskovsk 10830
+Yaroslavl 16
+Rybinsk 10839
+Tutaev 21154
+Arhangelsk 20
+Severodvinsk 10849
+Vologda 21
+Cherepovets 968
+Murmansk 23
+Apatity 10894
+Pskov 25
+Velikie Luky 10928
+Petrozavodsk 18
+Kondopoga 10934
+Sortavala 10937
+Syktyvkar 19
+Vorkuta 10940
+Usinsk 10944
+Uhta 10945
+Volgograd 38
+Volzhskiy 10951
+Kamishin 10959
+Krasnodar 35
+Sochi 239
+Novorossiysk 970
+Tuapse 1058
+Anapa 1107
+Armavir 10987
+Yesk 10993
+Rostov-na-Donu 39
+Novocherkask 238
+Taganrog 971
+Volgodonsk 11036
+Kamensk-Shakhtinsky 11043
+Shakhty 11053
+Stavropol 36
+Essentuky 11057
+Kislovodsk 11062
+Mineralniye Vodi 11063
+Nevinnomissk 11064
+Pyatigorsk 11067
+Nizhny Novgorod 47
+Dzerzhinsk 972
+Sarov 11083
+Vyksa 20040
+Kstovo 20044
+Satis 20258
+Orenburg 48
+Orsk 11091
+Perm 50
+Berezniki 20237
+Ufa 172
+Nephtekamsk 11114
+Salavat 11115
+Sterlitamak 11116
+Oktyabrsky 20235
+Kazan 43
+Naberezhnie Chelny 236
+Almetyevsk 11121
+Bugulma 11122
+Nizhnekamsk 11127
+Samara 51
+Togliatti 240
+Zhiguliovsk 11132
+Sizran 11139
+Saratov 194
+Balakovo 11143
+Engels 11147
+Izhevsk 44
+Glazov 11150
+Sarapul 11152
+Ulyanovsk 195
+Dimitrovgrad 11155
+Cheboksary 45
+Novocheboksarsk 37133
+Yekaterinburg 54
+Kamensk-Uralskiy 11164
+Nizhniy Tagil 11168
+Pervouralsk 11171
+Tyumen 55
+Ishim 11173
+Tobolsk 11175
+Khanty-Mansiysk 57
+Surgut 973
+Nizhnevartovsk 1091
+Nefteugansk 11184
+Chelyabinsk 56
+Magnitogorsk 235
+Miass 11212
+Ozersk 11214
+Satka 11217
+Salekhard 58
+Noviy Urengoy 11230
+Noyabrsk 11231
+Barnaul 197
+Biysk 975
+Irkutsk 63
+Bratsk 976
+Angarsk 11256
+Ust-Ilimsk 11273
+Kemerovo 64
+Novokuznetsk 237
+Mezgdurechensk 11287
+Krasnoyarsk 62
+Achinsk 11302
+Minusinsk 11310
+Norilsk 11311
+Zheleznogorsk 20086
+Tomsk 67
+Seversk 11351
+Blagoveshchensk 77
+Belogorsk 11374
+Tynda 11391
+Vladivostok 75
+Nahodka 974
+Ussuriysk 11426
+Khabarovsk 76
+Komsomolsk-at-Amur 11453
+Lvov District 20529
+Zakarpattia District 20530
+Ternopil District 20531
+Ivano-Frankovsk District 20532
+Chernovtci District 20533
+Rovno District 20534
+Khmelnitsky District 20535
+Volyn Oblast 20550
+Donetsk District 20536
+Dnepropetrovsk District 20537
+Kharkov District 20538
+Zaporojie District 20539
+Lugansk District 20540
+Odessa District 20541
+Kherson District 20542
+Nikolaev District 20543
+Kiev District 20544
+Vinnica District 20545
+Cherkassi District 20546
+Jitomir District 20547
+Kirovograd District 20548
+Poltava District 20549
+Chernigov District 20551
+Sumi District 20552
+Donetsk 142
+Mariupol 10366
+Kramatorsk 20554
+Horlovka 21774
+Makeevka 24876
+Dnepropetrovsk 141
+Krivoi Rog 10347
+Nikopol 21773
+Dniprodzerzhynsk 21775
+Pavlograd 28401
+Lugansk 222
+Alchevsk 24885
+Severodonetsk 24893
+Kiev 143
+Belaya Tserkov 10369
+Poltava 964
+Kremenchug 21609
+Astana 163
+Kokshetau 20809
+Almaty 162
+Taldikorgan 10303
+Semey 165
+Ust-Kamenogorsk 10306
+The Republic of Dagestan 11010
+The Republic of Ingushetia 11012
+The Kabardino-Balkar Republic 11013
+Karachaevo-Cherkesia Republic 11020
+The Republic of North Ossetia-Alania 11021
+Chechen Republic 11024
+Stavropol Krai 11069

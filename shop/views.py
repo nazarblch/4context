@@ -265,6 +265,7 @@ def get_syn(request):
                 ya_syn = get_synonyms([name])
 
             ya_syn = set(ya_syn) - set(db_syn)
+
             '''
 
 

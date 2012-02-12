@@ -13,6 +13,29 @@
 		var cur_elem_id = {{first_elem.id}};
 		var cur_elem_type = "cat";   
 		var tabs = [];
+        var new_unchecked_words = [];
+
+
+            function change_cur_cv_ob(type, id, unchecked_words){
+                arr = {}
+
+                arr['csrfmiddlewaretoken'] = getCookie("csrftoken");
+
+                arr['ob_name'] = type+id;
+                arr['dbtable'] = type;
+                arr['id'] = id;
+
+                arr['new_unchecked_words'] = unchecked_words.join("&_&");
+
+
+                $.post("/shop/change_cur_cv_ob/",
+                        arr,
+                        function(data) {
+                            alert(data);
+                            $( ".selectable" ).myselectable();
+                        }
+                );
+            }
 
 
 			$("#categories .cat").live('click', function(event){
@@ -33,12 +56,14 @@
 					tabs.push(cur_elem_type+cur_elem_id)
 					tabs[cur_elem_type+cur_elem_id] = newtab
 					
-					$("#collstd").prepend(newtab)
+					$("#collstd").prepend(newtab);
+
+                    var new_unchecked_words_str = new_unchecked_words.join("&_&");
 					
 					$.ajax({							
 						type: "POST",				
 						url: "/shop/get_syn/",
-						data: 'dbtable='+dbtable+'&id='+cur_elem_id+"&csrfmiddlewaretoken="+getCookie("csrftoken"),
+						data: 'dbtable='+dbtable+'&id='+cur_elem_id+"&csrfmiddlewaretoken="+getCookie("csrftoken")+'&new_unchecked_words='+new_unchecked_words_str,
 						dataType: "text", 		
 						timeout: 30000,
 						
@@ -55,10 +80,11 @@
 					
 				}else{
 					$("#container").remove();
-					$("#collstd").prepend(tabs[cur_elem_type+cur_elem_id])
+					$("#collstd").prepend(tabs[cur_elem_type+cur_elem_id]);
+                    change_cur_cv_ob(cur_elem_type, cur_elem_id, new_unchecked_words);
 				}
 
-
+                new_unchecked_words = []
 				
 			});
 			
@@ -80,12 +106,14 @@
 					tabs.push(cur_elem_type+cur_elem_id)
 					tabs[cur_elem_type+cur_elem_id] = newtab
 					
-					$("#collstd").prepend(newtab)
+					$("#collstd").prepend(newtab);
+
+                    var new_unchecked_words_str = new_unchecked_words.join("&_&");
 					
 					$.ajax({							
 						type: "POST",				
 						url: "/shop/get_syn/",
-						data: 'dbtable='+dbtable+'&id='+cur_elem_id+"&csrfmiddlewaretoken="+getCookie("csrftoken"),
+						data: 'dbtable='+dbtable+'&id='+cur_elem_id+"&csrfmiddlewaretoken="+getCookie("csrftoken")+'&new_unchecked_words='+new_unchecked_words_str,
 						dataType: "text", 		
 						timeout: 30000,
 						
@@ -102,10 +130,13 @@
 					
 				}else{
 					$("#container").remove();
-					$("#collstd").prepend(tabs[cur_elem_type+cur_elem_id])
+					$("#collstd").prepend(tabs[cur_elem_type+cur_elem_id]);
+
+                    change_cur_cv_ob(cur_elem_type, cur_elem_id, new_unchecked_words);
 				}
-				
-				
+
+                new_unchecked_words = []
+
 			});
 
             function del_span(elem){
@@ -205,22 +236,22 @@
 
                 $("#proposed").empty();
 
-                arr = {}
-
-                arr['csrfmiddlewaretoken'] = getCookie("csrftoken")
-                arr['cat_keys'] = keys
-
-                keys = Object.keys(ven_selected_syn)
-                arr['ven_keys'] = keys
-
-                for(k in ven_selected_syn){
-                    arr[k] = ven_selected_syn[k]
+                arr = {};
+                arr['csrfmiddlewaretoken'] = getCookie("csrftoken");
+                arr['new_unchecked_words'] = new_unchecked_words;
+                if( cur_elem_type == "ven" ){
+                    arr['checked_phr'] = ven_selected_syn[cur_elem_id];
+                }
+                if( cur_elem_type == "cat" ){
+                    arr['checked_phr'] = cat_selected_syn[cur_elem_id];
                 }
 
-                $.post("/shop/set_syn/",
+
+                $.post("/shop/get_more_syn/",
                         arr,
                         function(data) {
-                            alert("Data Loaded: " + data);
+                            $("#proposed").html(data);
+                            $( ".selectable" ).myselectable();
                         }
                 );
 
@@ -263,6 +294,7 @@
                         $(".cur_line").find("span").each(function () {
                            if(! $(this).hasClass("ui-selected") ){
                                bad_words.push($(this).html());
+                               new_unchecked_words.push($(this).html());
                            }
                         });
 

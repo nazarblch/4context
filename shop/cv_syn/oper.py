@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def del_substr(str, badwords): #        Удаляем в строке str все слова из badwords    
+def str_del_bad(str, badwords): #        Удаляем в строке str все слова из badwords    
     str=str.strip().center(len(str)+2)
     for word in badwords:
         word = word.strip().center(len(word)+2) 
@@ -20,9 +20,10 @@ def del_str(lst, used_words): #         Удаляем строки из lst е�
             if word in str: it.next()
         if it.next() == 0: clear_lst.append(str.strip())
     return clear_lst
+
+def list_del_bad(lst, badwords):
+    no_badwords = []
+    for str in lst:
+        no_badwords.append(str_del_bad(str, badwords))
+    return no_badwords
         
-        
-        
-        
-lst = ['dsf sfs dfskjf ', 'qewfbcu fdis dnusdfg', 'fdf', '12gvcg2 1jg3 g23', 'fdis g23']
-used = ['fdis', 'g23']

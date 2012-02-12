@@ -161,8 +161,13 @@ def add_syn_vendor_category(request):
 
     ob=Category_synonyms(categories[0].name)
     ob.phr_mod10 += [syn.name for syn in db_category_syn]
+    ob.obtained_phr |= set([syn.name for syn in db_category_syn])
 
     ob.phrase_suggestion_recursive( 10, [])
+
+    request.session["cur_cv_ob"] = ob
+    request.session["cv_obs"] = {}
+
 
     ya_category_syn = ob.phr_div10
 
@@ -171,7 +176,7 @@ def add_syn_vendor_category(request):
 
 
     if type(ya_category_syn) == type(""):
-        return HttpResponse("Direct error: " + ya_category_syn)
+        return HttpResponse("Direct error: " + str(ya_category_syn))
 
     db_category_syn = [syn.name for syn in db_category_syn]
     ya_category_syn = set(ya_category_syn) - set(db_category_syn)
@@ -183,6 +188,7 @@ def add_syn_vendor_category(request):
     shopid = request.session["shop"].id
 
     first_elem = categories[0]
+    request.session["cv_obs"]["cat"+str(first_elem.id)] = ob
 
     return render_to_response("shop/add_syn_vendor_category.html", {
                                                                     "username": request.user.username,
@@ -197,36 +203,102 @@ def add_syn_vendor_category(request):
                                                                     "ya_category_syn":ya_category_syn})
 
 
+
+def change_cur_cv_ob(request):
+    if request.is_ajax():
+
+        ob = request.session["cur_cv_ob"]
+        ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+        obname = request.POST["ob_name"]
+
+        try:
+            request.session["cur_cv_ob"] = request.session["cv_obs"][obname]
+        except:
+            get_syn(request)
+
+        return HttpResponse(obname)
+
+
 def get_syn(request):
 
     if request.is_ajax():
         dbtable = request.POST['dbtable']
         id = int(request.POST['id'])
 
+        ob = request.session["cur_cv_ob"]
+
+        if "new_unchecked_words" in request.POST:
+            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+
+        ya_syn = ""
+
         if dbtable == 'cat':
             obj = Categories.objects.get(id=id)
             db_syn = obj.synonyms()
             name = obj.name
+
+            ob=Category_synonyms(name)
+            ob.phr_mod10 += [syn.name for syn in db_syn]
+            ob.obtained_phr |= set([syn.name for syn in db_syn])
+
+            ob.phrase_suggestion_recursive( 10, [])
+
+            request.session["cur_cv_ob"] = ob
+
+            ya_syn = ob.phr_div10
+
+            request.session["cv_obs"]["cat"+str(id)] = ob
 
         if dbtable == 'ven':
             obj = Vendors.objects.get(id=id)
             db_syn = obj.synonyms()
             name = obj.name
 
-        if len(db_syn) > 0:
-            ya_syn = get_synonyms([name, db_syn[0]])
-        else:
-            ya_syn = get_synonyms([name])
+            ob=Vendor_synonyms(category, method='sug')
 
-        ya_syn = set(ya_syn) - set(db_syn)
+            ya_syn = ob.synonyms
+
+            '''
+            if len(db_syn) > 0:
+                ya_syn = get_synonyms([name, db_syn[0]])
+            else:
+                ya_syn = get_synonyms([name])
+
+            ya_syn = set(ya_syn) - set(db_syn)
+            '''
+
+
+
 
         if type(ya_syn) == type(""):
-            return HttpResponse("Direct error: " + ya_syn)
+            return HttpResponse("Direct error: " + str(ya_syn))
 
 
         return render_to_response("shop/syn_container.html", {
                                                                     "db_syn":db_syn,
                                                                     "ya_syn":ya_syn})
+
+def get_more_syn(request):
+
+    if request.is_ajax():
+        ob = request.session["cur_cv_ob"]
+
+        if "new_unchecked_words" in request.POST:
+            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+
+        ob.phrase_suggestion_recursive( 10, [])
+
+        ya_syn = ob.phr_div10
+
+        request.session["cur_cv_ob"] = ob
+
+        return render_to_response("shop/syn_container.html", {
+                                                                "db_syn":[],
+                                                                "ya_syn":ya_syn})
+
+
+
+
 
 
 

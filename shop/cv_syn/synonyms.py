@@ -7,9 +7,10 @@ from itertools import ifilterfalse
 
 from ya_func import suggestion, wordstat_search_also
 from transl import translit, find_substr_in_arr, check_lang
-from oper import del_substr
-from morph import all_declinations
+
+from morph import all_declinations, find_im, leave_mn
 from collections import deque
+from oper import list_del_bad, del_str
 
 
 
@@ -84,7 +85,7 @@ PHR_NUM = 10
 class Category_synonyms:
 
     def __init__(self, category):
-        self.bad_words = [unicode(word, "utf-8") for word in ['цена', 'каталог','цены', 'продажа', 'куплю', 'купить', 'недорого', 'дешево', 'интернет магазин','бесплатно','продать', 'магазин']]
+        self.bad_words = [unicode(word, "utf-8") for word in ['цена','дешевые', 'каталог','цены', 'продажа', 'куплю', 'купить', 'недорого', 'дешево', 'интернет магазин','бесплатно','продать', 'магазин']]
         self.otherwords = [unicode(word, "utf-8") for word in ['купить', 'цена', 'лучшие']]
         #self.synonyms = self.syn_suggestion(category, self.bad_words)
         self.category_suggestion = []
@@ -93,7 +94,7 @@ class Category_synonyms:
         self.cur_phr_q.extend([' '.join([category, word]) for word in self.otherwords])
         self.phr_div10 = []
         self.phr_mod10 = []
-        self.obtained_phr = set()
+        self.obtained_phr = set([category])
         self.unchecked_words = set()
 
 
@@ -105,12 +106,38 @@ class Category_synonyms:
 
         return list(suggest_set)
 
-    def clear_suggest(self, suggest_arr, checked_phr): #  checked_phr - all phrases currently checked by user
-        pass
+    def clear_suggest(self, suggest_arr): #  checked_phr - all phrases currently checked by user
         '''
-        clear new arr from ya
-        should return cleaned list
+        bad_words also have to be 'scloned'
         '''
+        suggest_arr = list_del_bad(suggest_arr, self.bad_words + list(self.unchecked_words))
+        suggest_arr = set(suggest_arr) | self.obtained_phr
+
+        suggest_arr = list(suggest_arr)
+
+        im = find_im(suggest_arr)['im']
+        not_im = find_im(suggest_arr)['not_im']
+        for_sclon = leave_mn(im)
+        sclon = set([])
+        for phr in for_sclon:
+            sclon.update(all_declinations(phr))
+
+
+        not_im = set(not_im)
+        for_sclon = set(for_sclon)
+
+        result = for_sclon | (not_im - sclon)
+
+        result.difference_update(self.obtained_phr)
+
+        sclon = set([])
+        for phr in self.obtained_phr:
+            sclon.update(all_declinations(phr))
+
+        result.difference_update(sclon)
+
+
+        return list(result)
 
 
     def phrase_suggestion_recursive(self, num_ya_req, new_unchecked_words, checked_phr=[]):
@@ -122,16 +149,18 @@ class Category_synonyms:
         self.phr_div10 = self.phr_mod10[:PHR_NUM]
         if len(self.phr_mod10) >= PHR_NUM:
             self.phr_mod10 = self.phr_mod10[PHR_NUM:]
-
-        qlist = list(self.cur_phr_q)
+        else:
+            self.phr_mod10 = []
 
         while len(self.cur_phr_q) > 0 and len(self.phr_div10) < PHR_NUM and req_count < num_ya_req:
             phrase = self.cur_phr_q.popleft()
             suggest_arr = self.phrase_suggestion(phrase)
 
+            self.obtained_phr |= set(checked_phr)
+
             suggest_arr = list(set(suggest_arr) - self.obtained_phr)
 
-            #suggest_arr = self.clear_suggest(suggest_arr, checked_phr)
+            suggest_arr = self.clear_suggest(suggest_arr)
 
             req_count += 1
 

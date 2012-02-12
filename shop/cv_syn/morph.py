@@ -9,6 +9,7 @@ try:
 except:
     morph = get_morph(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'morph'))
 
+    
 def all_declinations(str):    #        создание списка всех склонений строки
     
     cases = ['им', 'рд', 'дт','вн','тв','пр']
@@ -21,7 +22,7 @@ def all_declinations(str):    #        создание списка всех с
         tmp =[]
         for word in str.split():
             if check_lang(word) == 'ru':
-                tmp.append(morph.inflect_ru(unicode(word).upper(), unicode(cs)))
+                tmp.append(morph.inflect_ru(unicode(word).upper(), unicode(cs, "utf-8")))
             else:
                 tmp.append(word)
          
@@ -54,7 +55,7 @@ def find_im(lst):#        находит им.п
                     im.append(str)
                     continue
                         
-            if 'им' in reduce(lambda x,y: ' '.join([x,y]) ,[var['info'] for var in morph.get_graminfo(word)]):
+            if u'им' in reduce(lambda x,y: ' '.join([x,y]) ,[var['info'] for var in morph.get_graminfo(word)]):
                 if i == len(str.split()) - 1:
                     im.append(str)
             else:
@@ -77,7 +78,7 @@ def leave_mn(lst): #        Чистит список оставляя мн.ч �
            
     mn = []
     for i in range(len(lst)):
-        if lst[i] in mn: continue
+        if lst_mn[i] in mn: continue
         it = iter(range(len(lst)))
         
         for j in range(len(lst)):
@@ -93,4 +94,7 @@ def leave_mn(lst): #        Чистит список оставляя мн.ч �
     mn = [word.lower() for word in mn]
     
     return mn
+
+
+
 

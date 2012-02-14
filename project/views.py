@@ -7,6 +7,16 @@ from myproject.agency.models import Clients
 from myproject.shop.models import ShopInfo
 
 
+def create_progect(request):
+#kdlsfdkfls
+    clid = int(request.session['client'])
+    cl = Clients.objects.get(id=clid)
+    cllogin = cl.login
+    shopname = request.session["shop"].name
+    shopid = request.session["shop"].id
+
+
+
 def sort_kw_phr(request):
 #kdlsfdkfls
     clid = int(request.session['client'])

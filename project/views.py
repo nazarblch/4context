@@ -8,7 +8,7 @@ from myproject.shop.models import ShopInfo
 
 
 def sort_kw_phr(request):
-
+#kdlsfdkfls
     clid = int(request.session['client'])
     cl = Clients.objects.get(id=clid)
     cllogin = cl.login

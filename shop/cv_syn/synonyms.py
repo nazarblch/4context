@@ -74,13 +74,12 @@ class Vendor_synonyms:
 
 
     def check_synonyms(self, synonyms_start, vendor):
-        synonyms_finish = set(find_substr_in_arr(vendor, synonyms_start, cutoff=0.5, variants=1))
+        synonyms_finish = set(find_substr_in_arr(vendor, synonyms_start, cutoff=0.7, variants=1))
         if check_lang(vendor) == 'en':
-            synonyms_finish.update(find_substr_in_arr(translit(vendor), synonyms_start, cutoff=0.5, variants=1))
+            synonyms_finish.update(find_substr_in_arr(translit(vendor), synonyms_start, cutoff=0.7, variants=1))
 
         synonyms_finish.difference_update([vendor])
         return synonyms_finish
-
 
 
 

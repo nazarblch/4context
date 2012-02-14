@@ -17,6 +17,7 @@ from oper import list_del_bad, del_str
 class Vendor_synonyms:
 
     def __init__(self, vendor, method='sug', **kwargs):
+        self.dbtable="ven"
         vendor=unicode(vendor).lower()
         self.vendor = vendor
         self.otherwords = [unicode(word, "utf-8") for word in ['купить', 'цена']]
@@ -87,6 +88,7 @@ PHR_NUM = 10
 class Category_synonyms:
 
     def __init__(self, category):
+        self.dbtable="cat"
         self.bad_words = [unicode(word, "utf-8") for word in ['цена','дешевые', 'каталог','цены', 'продажа', 'куплю', 'купить', 'недорого', 'дешево', 'интернет магазин','бесплатно','продать', 'магазин']]
         self.otherwords = [unicode(word, "utf-8") for word in ['купить', 'цена', 'лучшие']]
         #self.synonyms = self.syn_suggestion(category, self.bad_words)

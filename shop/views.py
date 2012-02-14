@@ -210,7 +210,7 @@ def change_cur_cv_ob(request):
         ob = request.session["cur_cv_ob"]
         dbtable = request.POST['dbtable']
 
-        if dbtable == "ven":
+        if ob.dbtable == "cat":
             ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
         obname = request.POST["ob_name"]
 
@@ -230,20 +230,22 @@ def get_syn(request):
 
         ob = request.session["cur_cv_ob"]
 
+        if "new_unchecked_words" in request.POST and ob.dbtable == "cat":
+            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+
+
 
         ya_syn = ""
 
         if dbtable == 'cat':
-            if "new_unchecked_words" in request.POST:
-                ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
 
             obj = Categories.objects.get(id=id)
             db_syn = obj.synonyms()
             name = obj.name
 
             ob=Category_synonyms(name)
-            ob.phr_mod10 += [syn.name for syn in db_syn]
-            ob.obtained_phr |= set([syn.name for syn in db_syn])
+            ob.phr_mod10 += db_syn
+            ob.obtained_phr |= set(db_syn)
 
             ob.phrase_suggestion_recursive( 10, [])
 

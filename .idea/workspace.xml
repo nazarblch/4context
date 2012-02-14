@@ -30,7 +30,8 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9069f5af-da54-4ae3-9368-0b8204e72fa7" name="Default" comment="">
+    <list id="9069f5af-da54-4ae3-9368-0b8204e72fa7" name="Default" comment="" />
+    <list default="true" id="cb689d9a-1df0-40ec-8cb2-dcedaf0399be" name="New changelist" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myproject.iws" />
@@ -105,7 +106,7 @@
       <file leaf-file-name="add_syn_vendor_category.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="37" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.49253732">
+            <state line="128" column="24" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.6268657">
               <folding />
             </state>
           </provider>
@@ -618,9 +619,11 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9069f5af-da54-4ae3-9368-0b8204e72fa7" name="Default" comment="" />
+      <changelist id="cb689d9a-1df0-40ec-8cb2-dcedaf0399be" name="New changelist" comment="" />
       <created>1328363437617</created>
-      <updated>1328363437617</updated>
+      <updated>1329252723854</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -673,7 +676,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.114567526" sideWeight="0.9150641" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5480769" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15224358" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DatabaseBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -849,7 +852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="37" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.49253732">
+        <state line="128" column="24" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.6268657">
           <folding />
         </state>
       </provider>

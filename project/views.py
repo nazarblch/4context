@@ -1,19 +1,36 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
+from django.views.generic.simple import direct_to_template
 from myproject.project.forms import Create_Company
 from myproject.project.models import Company
 from myproject.agency.models import Clients
 from myproject.shop.models import ShopInfo
 
-
-def create_progect(request):
-#kdlsfdkfls
+def get_default_info(request):
     clid = int(request.session['client'])
     cl = Clients.objects.get(id=clid)
     cllogin = cl.login
     shopname = request.session["shop"].name
     shopid = request.session["shop"].id
+
+    return  {
+        "username": request.user.username,
+        "cllogin": cllogin,
+        "shopname": shopname,
+        "shopid": shopid,
+        "clid": clid,
+            }
+
+
+def create_progect(request):
+
+    def_templ_data = get_default_info(request)
+
+    templ_dict = {}
+    templ_dict.update(def_templ_data)
+    return direct_to_template(request, 'project/index.html', templ_dict)
+
 
 
 

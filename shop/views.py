@@ -208,7 +208,10 @@ def change_cur_cv_ob(request):
     if request.is_ajax():
 
         ob = request.session["cur_cv_ob"]
-        ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+        dbtable = request.POST['dbtable']
+
+        if dbtable == "ven":
+            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
         obname = request.POST["ob_name"]
 
         try:
@@ -227,12 +230,13 @@ def get_syn(request):
 
         ob = request.session["cur_cv_ob"]
 
-        if "new_unchecked_words" in request.POST:
-            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
 
         ya_syn = ""
 
         if dbtable == 'cat':
+            if "new_unchecked_words" in request.POST:
+                ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+
             obj = Categories.objects.get(id=id)
             db_syn = obj.synonyms()
             name = obj.name

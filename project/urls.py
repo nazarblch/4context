@@ -6,8 +6,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('myproject.project',
-        (r'^', 'views.index'),               
-        (r'^create_company/', 'views.create_company'),  
+
+    (r'^sort_kw_phr/$', 'views.sort_kw_phr'),
+
 )
 
 

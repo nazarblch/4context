@@ -30,7 +30,18 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9069f5af-da54-4ae3-9368-0b8204e72fa7" name="Default" comment="" />
+    <list default="true" id="9069f5af-da54-4ae3-9368-0b8204e72fa7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/nazar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/kw_block_models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/urls.py" afterPath="$PROJECT_DIR$/project/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/views.py" afterPath="$PROJECT_DIR$/project/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/cv_syn/ex.py" afterPath="$PROJECT_DIR$/shop/cv_syn/ex.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/cv_syn/synonyms.py" afterPath="$PROJECT_DIR$/shop/cv_syn/synonyms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/models.py" afterPath="$PROJECT_DIR$/shop/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/views.py" afterPath="$PROJECT_DIR$/shop/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html" afterPath="$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html" />
+    </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,84 +66,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shop/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="264" column="45" selection-start="8331" selection-end="8331" vertical-scroll-proportion="0.2506964">
-              <folding>
-                <element signature="e#42#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="272" column="0" selection-start="9571" selection-end="9571" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="handlers.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basehttp.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="569" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocketServer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python2.7/SocketServer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="0" selection-start="8048" selection-end="8048" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="syn_container.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/shop/syn_container.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="521" selection-end="521" vertical-scroll-proportion="-9.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="synonyms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shop/cv_syn/synonyms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="31" selection-start="5003" selection-end="5003" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#24#33#0" expanded="true" />
-              </folding>
+            <state line="122" column="28" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/tests.py">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -140,10 +84,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shop/cv_syn/test.py">
+      <file leaf-file-name="kw_block_models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/kw_block_models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="13" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="19" selection-start="204" selection-end="215" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="39" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4032258">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="141" column="37" selection-start="4192" selection-end="4225" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="55" selection-start="574" selection-end="625" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="11" selection-start="1536" selection-end="1543" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ex.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/cv_syn/ex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="9" selection-start="227" selection-end="457" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="morph.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shop/cv_syn/morph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,22 +182,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/base/base.html" />
-        <option value="$PROJECT_DIR$/templates/shop/show_companies.html" />
-        <option value="$PROJECT_DIR$/shop/models.py" />
-        <option value="$PROJECT_DIR$/templates/shop/index.html" />
-        <option value="$PROJECT_DIR$/media/css/base_style.css" />
         <option value="$PROJECT_DIR$/yafunc.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/tests/urls.py" />
         <option value="$PROJECT_DIR$/tests/views.py" />
         <option value="$PROJECT_DIR$/media/css/shop_style.css" />
-        <option value="$PROJECT_DIR$/shop/cv_syn/morph.py" />
         <option value="$PROJECT_DIR$/shop/urls.py" />
         <option value="$PROJECT_DIR$/templates/shop/syn_container.html" />
-        <option value="$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html" />
-        <option value="$PROJECT_DIR$/shop/cv_syn/synonyms.py" />
         <option value="$PROJECT_DIR$/shop/views.py" />
+        <option value="$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html" />
+        <option value="$PROJECT_DIR$/shop/cv_syn/morph.py" />
+        <option value="$PROJECT_DIR$/shop/cv_syn/ex.py" />
+        <option value="$PROJECT_DIR$/shop/cv_syn/synonyms.py" />
+        <option value="$PROJECT_DIR$/shop/models.py" />
+        <option value="$PROJECT_DIR$/project/kw_block_models.py" />
+        <option value="$PROJECT_DIR$/project/urls.py" />
+        <option value="$PROJECT_DIR$/project/views.py" />
       </list>
     </option>
   </component>
@@ -226,7 +233,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,24 +261,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="shop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -287,30 +275,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cv_syn" />
+              <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,7 +368,25 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node JS">
+    <configuration default="false" name="ex" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shop/cv_syn" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <module name="myproject" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shop/cv_syn/ex.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="MULTIPROCESS" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node JS" coffeescript-run="false">
       <method>
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -548,12 +537,13 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.myproject" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.clients.html" />
       <item index="2" class="java.lang.String" itemvalue="Python.views" />
       <item index="3" class="java.lang.String" itemvalue="Python.yafunc" />
       <item index="4" class="java.lang.String" itemvalue="Query Language Console.Default" />
+      <item index="5" class="java.lang.String" itemvalue="Python.ex" />
     </list>
   </component>
   <component name="SSCMIVcsConfiguration">
@@ -632,9 +622,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-2" width="1368" height="771" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852563" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Unicode Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22275642" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -642,13 +632,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" x="355" y="281" width="655" height="205" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.67147434" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1828528" sideWeight="0.67147434" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34134614" sideWeight="0.4939302" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18910256" sideWeight="0.4939302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852563" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -657,7 +647,6 @@
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TaskBrowser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PMIP" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.114567526" sideWeight="0.9150641" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5480769" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -668,6 +657,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -727,19 +717,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/shop/views.py</url>
-          <line>687</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/shop/views.py</url>
-          <line>289</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/shop/cv_syn/synonyms.py</url>
-          <line>162</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/shop/cv_syn/synonyms.py</url>
-          <line>154</line>
+          <line>706</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -764,119 +742,87 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/shop/cv_syn/morph.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/utils/datastructures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="310" column="0" selection-start="9073" selection-end="9073" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/utils/importlib.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="110" column="0" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/utils/functional.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="5461" selection-end="5461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="208" column="0" selection-start="7408" selection-end="7408" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="0" selection-start="9876" selection-end="9876" vertical-scroll-proportion="0.0">
+        <state line="67" column="0" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="695" column="0" selection-start="25130" selection-end="25130" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/SocketServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="0" selection-start="10154" selection-end="10154" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/cv_syn/synonyms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="28" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/kw_block_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="204" selection-end="215" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="37" selection-start="4192" selection-end="4225" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shop/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+        <state line="15" column="55" selection-start="574" selection-end="625" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="11" selection-start="1536" selection-end="1543" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/cv_syn/ex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="9" selection-start="227" selection-end="457" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop/cv_syn/morph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4032258">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="850" selection-end="850" vertical-scroll-proportion="-6.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shop/syn_container.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="521" selection-end="521" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="0" selection-start="9571" selection-end="9571" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/contrib/staticfiles/handlers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="569" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/SocketServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="0" selection-start="8048" selection-end="8048" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop/cv_syn/synonyms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="31" selection-start="5003" selection-end="5003" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop/cv_syn/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="13" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shop/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="45" selection-start="8331" selection-end="8331" vertical-scroll-proportion="0.2506964">
-          <folding>
-            <element signature="e#42#75#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

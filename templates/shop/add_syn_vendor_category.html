@@ -32,9 +32,10 @@
                         arr,
                         function(data) {
                             alert(data);
-                            $( ".selectable" ).myselectable();
+
                         }
                 );
+
             }
 
 
@@ -70,7 +71,8 @@
 						success: function(data) {
 					
 									$("#proposed").html(data);
-									$("#selected").empty()
+									$("#selected").empty();
+                                    $("#proposed").find(".selectable" ).myselectable();
 								 
 						}
 						
@@ -85,7 +87,7 @@
 				}
 
                 new_unchecked_words = []
-				
+
 			});
 			
 			$("#vendors .ven").live('click', function(event){
@@ -120,8 +122,9 @@
 						success: function(data) {
 					
 									$("#proposed").html(data);
-									$("#selected").empty()
-								 
+									$("#selected").empty();
+                                    $( ".selectable" ).myselectable();
+                                    $("#proposed").find(".selectable" ).myselectable();
 						}
 						
 						
@@ -246,12 +249,14 @@
                     arr['checked_phr'] = cat_selected_syn[cur_elem_id];
                 }
 
+                arr["dbtable"] = cur_elem_type;
+
 
                 $.post("/shop/get_more_syn/",
                         arr,
                         function(data) {
                             $("#proposed").html(data);
-                            $( ".selectable" ).myselectable();
+
                         }
                 );
 
@@ -298,7 +303,7 @@
                            }
                         });
 
-                        $(".selectable").each(function () {
+                        $("#proposed .selectable").each(function () {
                             $(this).find("span").each(function () {
                                 var word = $(this).html();
                                 var idx = bad_words.indexOf(word);
@@ -308,11 +313,51 @@
                                 }
 
                             });
+
+                            if ($(this).html().length == 0) $(this).remove();
                         });
 
                         bad_words = [];
 
                         $(".cur_line").dblclick();
+
+
+                        function compare_arrs(arr1, arr2){
+
+                            if (arr1.length != arr2.length) return false;
+
+                            for(k1 in arr1){
+                                var idx = arr2.indexOf( arr1[k1] )
+                                if(idx!=-1) arr2.splice(idx, 1)
+                            }
+
+                            if (arr2.length == 0) return true
+                            else return false
+
+
+                        }
+
+                        var cur_line_text = del_span( ".cur_line" );
+                        $(".selectable").each(function () {
+                            var text = del_span( this );
+
+                            if ( !$(this).hasClass("cur_line") && compare_arrs(text.split(" "), cur_line_text.split(" ") ) ){
+                                $(this).remove();
+                            }else{
+
+                                $(this).addClass("withlabel");
+                                $("#proposed .selectable").each(function () {
+                                    var text1 = del_span( this );
+                                    if( !$(this).hasClass("withlabel") && compare_arrs(text.split(" "), text1.split(" ") )  )
+                                        $(this).remove();
+                                });
+                                $(this).removeClass("withlabel");
+
+                            }
+
+                        });
+
+
                         $(".cur_line").removeClass("cur_line");
 
                     }

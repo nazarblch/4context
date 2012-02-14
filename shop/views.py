@@ -254,9 +254,14 @@ def get_syn(request):
             db_syn = obj.synonyms()
             name = obj.name
 
-            ob=Vendor_synonyms(category, method='sug')
+
+            ob=Vendor_synonyms(name, method='sug')
+
 
             ya_syn = ob.synonyms
+            ya_syn = set(ya_syn) - set(db_syn)
+            request.session["cur_cv_ob"] = ob
+            request.session["cv_obs"]["ven"+str(id)] = ob
 
             '''
             if len(db_syn) > 0:
@@ -284,12 +289,26 @@ def get_more_syn(request):
     if request.is_ajax():
         ob = request.session["cur_cv_ob"]
 
-        if "new_unchecked_words" in request.POST:
-            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+        dbtable = request.POST['dbtable']
 
-        ob.phrase_suggestion_recursive( 10, [])
+        if dbtable == 'cat':
 
-        ya_syn = ob.phr_div10
+            if "new_unchecked_words" in request.POST:
+                ob.unchecked_words |= set(request.POST.getlist("new_unchecked_words"))
+
+            checked_phr = []
+            if "checked_phr" in request.POST:
+                checked_phr = request.POST.getlist("checked_phr")
+
+            ob.phrase_suggestion_recursive( 10, [], checked_phr)
+
+            ya_syn = ob.phr_div10
+
+        if dbtable == 'ven':
+
+            ya_syn = ob.add_wordstat()
+
+
 
         request.session["cur_cv_ob"] = ob
 

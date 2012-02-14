@@ -2,10 +2,12 @@ from django.db import models
 from myproject.agency.models import Clients
 import datetime
 
+
 class Vendors(models.Model):        
     name = models.CharField(max_length=100)
     vendorCode = models.CharField(max_length=100, blank=True)
     country_of_origin = models.CharField(max_length=100, blank=True)
+
     
     def __unicode__(self):
         return self.name  
@@ -250,6 +252,42 @@ class Products(models.Model):
     class Meta:
         ordering = ["category","vendor"]
 
+
+
+    def add_synonyms(self, phrases):
+        ids = []
+
+        for phr in phrases:
+            phr = phr.lower()
+            old_obj = Product_synonyms.objects.filter(name=phr)
+            if old_obj.count() == 0:
+                new_syn = Product_synonyms(product=self, name=phr, score=1)
+                new_syn.save()
+                ids.append(new_syn)
+            else:
+                old_obj[0].score += 1
+                old_obj[0].save()
+                ids.append(old_obj[0])
+
+        return ids
+
+    def synonyms(self):
+        syns = self.product_synonyms_set.all()
+
+        return [s.name for s in syns]
+
+
+class Product_synonyms(models.Model):
+    product = models.ForeignKey(Products)
+    name = models.CharField(max_length=100)
+    patt = models.CharField(max_length=50, blank=True)
+    score = models.IntegerField(default=1)
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        ordering = ["-score"]
 
     
 class Params(models.Model):

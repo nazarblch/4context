@@ -2,7 +2,7 @@
 import os
 import difflib
 import re
-from itertools import ifilterfalse
+from itertools import ifilterfalse,permutations
 
 
 from ya_func import suggestion, wordstat_search_also
@@ -18,6 +18,7 @@ class Vendor_synonyms:
 
     def __init__(self, vendor, method='sug', **kwargs):
         vendor=unicode(vendor).lower()
+        self.vendor = vendor
         self.otherwords = [unicode(word, "utf-8") for word in ['купить', 'цена']]
 
         if 'add_ow' in kwargs:
@@ -65,7 +66,8 @@ class Vendor_synonyms:
             if  intersection != 0: synonyms.update(intersection)
         return synonyms
 
-    def add_wordstat(self, vendor):
+    def add_wordstat(self, vendor=""):
+        if vendor == "": vendor = self.vendor
         new = self.synonyms_wordstat(vendor) - set(self.synonyms)
         return set(new)
 
@@ -117,6 +119,9 @@ class Category_synonyms:
 
         im = find_im(suggest_arr)['im']
         not_im = find_im(suggest_arr)['not_im']
+
+        im = list(set(im) - self.permutations_strings(im,'yes'))
+
         for_sclon = leave_mn(im)
         sclon = set([])
         for phr in for_sclon:
@@ -128,7 +133,7 @@ class Category_synonyms:
 
         result = for_sclon | (not_im - sclon)
 
-        result.difference_update(self.obtained_phr)
+        result.difference_update(self.permutations_strings(self.obtained_phr))
 
         sclon = set([])
         for phr in self.obtained_phr:
@@ -138,6 +143,13 @@ class Category_synonyms:
 
 
         return list(result)
+
+    def permutations_strings(self, strings, remove = 'no'):
+        per = set([])
+        for str in strings:
+            per.update(map(lambda x: ' '.join(x),permutations(str.split()) ))
+            if remove == 'yes': per.remove(str)
+        return per
 
 
     def phrase_suggestion_recursive(self, num_ya_req, new_unchecked_words, checked_phr=[]):

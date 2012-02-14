@@ -9,4 +9,5 @@ class Create_Company(ModelForm):
 class Create_Project(ModelForm):
 	class Meta:
 		model=Project
+        exclude = ('shop',)
 		

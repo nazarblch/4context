@@ -20,7 +20,7 @@ BOOL_CHOICES=(
 MOD10_CHOICES=tuple([(i*10, u'%s' % (i*10)+'%') for i in range(11)])
 
 class Project(models.Model):
-	client=models.ForeignKey(ShopInfo)
+	shop=models.ForeignKey(ShopInfo)
 	name=models.CharField(max_length=30)
 	email=models.EmailField(max_length=100)
 	geo=models.CharField(max_length=50)    #coma separated

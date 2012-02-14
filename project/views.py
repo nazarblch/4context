@@ -6,6 +6,8 @@ from myproject.project.forms import Create_Company
 from myproject.project.models import Company
 from myproject.agency.models import Clients
 from myproject.shop.models import ShopInfo
+from myproject.project.models import *
+from project.forms import Create_Project
 
 def get_default_info(request):
     clid = int(request.session['client'])
@@ -23,12 +25,15 @@ def get_default_info(request):
             }
 
 
-def create_progect(request):
+def index(request):
 
     def_templ_data = get_default_info(request)
 
     templ_dict = {}
+    form=Create_Project(request.POST)
+    templ_dict.update({"form": form})
     templ_dict.update(def_templ_data)
+
     return direct_to_template(request, 'project/index.html', templ_dict)
 
 

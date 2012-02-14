@@ -31,16 +31,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9069f5af-da54-4ae3-9368-0b8204e72fa7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/nazar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/kw_block_models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/urls.py" afterPath="$PROJECT_DIR$/project/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/views.py" afterPath="$PROJECT_DIR$/project/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/cv_syn/ex.py" afterPath="$PROJECT_DIR$/shop/cv_syn/ex.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/cv_syn/synonyms.py" afterPath="$PROJECT_DIR$/shop/cv_syn/synonyms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/models.py" afterPath="$PROJECT_DIR$/shop/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/views.py" afterPath="$PROJECT_DIR$/shop/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html" afterPath="$PROJECT_DIR$/templates/shop/add_syn_vendor_category.html" />
     </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,7 +96,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="39" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4032258">
+            <state line="12" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="0.28225806">
               <folding />
             </state>
           </provider>
@@ -289,7 +280,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
@@ -622,9 +613,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-2" width="1368" height="771" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852563" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852563" sideWeight="0.4817906" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Unicode Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.67147434" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22275642" sideWeight="0.5007587" order="7" side_tool="true" content_ui="tabs" />
@@ -647,6 +638,7 @@
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TaskBrowser" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PMIP" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.114567526" sideWeight="0.9150641" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.67147434" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5480769" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -657,7 +649,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -821,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="39" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4032258">
+        <state line="12" column="37" selection-start="422" selection-end="422" vertical-scroll-proportion="0.28225806">
           <folding />
         </state>
       </provider>

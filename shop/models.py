@@ -258,7 +258,9 @@ class Products(models.Model):
         ids = []
 
         for phr in phrases:
-            phr = phr.lower()
+            phr = phr.strip().lower()
+            if phr == "":continue
+
             old_obj = Product_synonyms.objects.filter(name=phr)
             if old_obj.count() == 0:
                 new_syn = Product_synonyms(product=self, name=phr, score=1)

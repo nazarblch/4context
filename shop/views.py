@@ -15,6 +15,7 @@ import codecs
 from django.utils.encoding import *
 
 from cv_syn.synonyms import *
+from django.utils import simplejson
 
 
 
@@ -510,12 +511,14 @@ def show_model_syns(request):
         shop = request.session['shop']
         
         for k,gr in enumerate(Mg):
-            kw_patts = request.POST.getlist(k)
-            if len(kw_patts) == 0: kw_patts = request.POST.getlist(str(k))
+            kw_patts = request.POST.get(str(k),"")
+            if kw_patts == "": continue
+
+            kw_patts = kw_patts.split("_")
             
             for kw_patt in kw_patts:
                 for mod in gr.models:
-                    modkwphr = mod.get_subphrathe(gr.kwpatt[kw_patt][0], gr.pattern)
+                    modkwphr = mod.get_subphrathe(gr.kwpatt[str(kw_patt)][0], gr.pattern)
                     if len(modkwphr) > 0:
                         mod.kwphr.add(" ".join(modkwphr))
 
@@ -528,10 +531,34 @@ def show_model_syns(request):
 def push_model_syns_to_db(request):
     
     if request.is_ajax():
-        
+
+        Mg = request.session["Mg"]
+
         shop = request.session['shop']
-        
-        
+
+        try:
+
+            for k,gr in enumerate(Mg):
+                for mod in gr.models:
+
+                    mod_syns = []
+                    if str(mod.id) not in request.POST: continue
+                    else: mod_syns = request.POST[str(mod.id)].strip(',').split(',')
+                    if len(mod_syns) == 0: continue
+
+                    mod_syns = map(lambda s: str(s).strip(), mod_syns)
+
+                    product = Products.objects.get(id=mod.id)
+                    product.add_synonyms(mod_syns)
+
+        except Exception, e:
+            print str(e)
+            return  HttpResponse(str(e))
+
+
+
+        return  HttpResponse("0")
+
 
 
 def show_companies(request="", shop_id="", fparams=""):

@@ -119,3 +119,30 @@
 
 .selectable .ui-selecting { background: #FECA40; }
 .selectable .ui-selected { background: #F39814; color: white; }
+
+.gr{
+    margin: 10px;
+    padding: 10px;
+    border: 1px #CCC solid;
+}
+
+.selected_gr_syn{
+    position:relative;
+    margin-right:-240px;
+    width:240px;
+    float:right;
+    border:1px solid #999;
+}
+
+#groups{
+    padding-right: 250px;
+}
+
+.model_name{
+    color: blue;
+}
+
+.del_model_syn{
+    cursor: pointer;
+    color: red;
+}

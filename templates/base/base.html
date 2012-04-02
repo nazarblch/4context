@@ -53,7 +53,8 @@
 
       $(window).resize(function(){
 
-          $("#base_content").css({"min-height": ($(window).height() - $("#base_footer").height() - $("#base_header").height() -20)+"px"});
+          var h = $(document).height() > $(window).height() ? $(document).height() : $(window).height();
+          $("#base_content").css({"min-height": (h - $("#base_footer").height() - $("#base_header").height() -20)+"px"});
 
       });
 

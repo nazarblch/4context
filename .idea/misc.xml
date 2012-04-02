@@ -341,7 +341,7 @@
     </ddl-file-settings>
   </component>
   <component name="ProjectKey">
-    <option name="state" value="project://4807a4f8-1475-4459-b541-19512a7d12de" />
+    <option name="state" value="git@localhost:django.git" />
   </component>
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>

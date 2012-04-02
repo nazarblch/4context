@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CssXFireSettings">
     <general autoClear="false" autoExpand="true" />
-    <strategy useRoutes="true" mediaReduce="true" fileReduce="true" currentDocumentsReduce="true" />
+    <strategy useRoutes="true" mediaReduce="true" fileReduce="true" currentDocumentsReduce="true" resolveVariables="false" resolveMixins="false" />
     <routes>
       <file url="file://$PROJECT_DIR$" route="/" />
     </routes>

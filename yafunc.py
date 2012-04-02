@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-
-from django.http import  HttpResponse
-
-
-from django.core.context_processors import csrf
+try:
+    from django.http import  HttpResponse
+    from django.core.context_processors import csrf
+except:
+    pass
 
 import time
 
@@ -35,10 +35,9 @@ class NamespaceCorrectionPlugin(MessagePlugin):
 #api = Client('http://soap.direct.yandex.ru/wsdl/v4/', plugins = [NamespaceCorrectionPlugin()])
 '''песочница'''
 
-try :
-    api = Client('https://api-sandbox.direct.yandex.ru/wsdl/v4/', plugins = [NamespaceCorrectionPlugin()])
-except:
-    api = Client('http://localhost/send.wdsl', plugins = [NamespaceCorrectionPlugin()])
+
+api = Client('https://api-sandbox.direct.yandex.ru/wsdl/v4/', plugins = [NamespaceCorrectionPlugin()])
+
 
 api.set_options(cache=DocumentCache())
 
@@ -67,8 +66,8 @@ class YandexCertHandler(urllib2.HTTPSHandler):
     https_request = urllib2.AbstractHTTPHandler.do_request_
 
 api.options.transport.urlopener = urllib2.build_opener(*[YandexCertHandler()])
-'''
 
+'''
 login = Element('login').setText('genromix')
 token = Element('token').setText('895750b6f51d494e91e6a59e06a11e51')
 appId = Element('application_id').setText('1ba17deb0ba44efe9edf9b329269ca75')
@@ -667,9 +666,9 @@ max 100 фраз на запрос
 
 def budget_forecast(request):
 
-        phrases = request.POST.getlist("phrase")
-        geos = request.POST.getlist("geo")
-        categories = request.POST.getlist("category")
+        phrases = request["phrase"]
+        geos = request["geo"]
+        categories = request["category"]
 
         i = 0
         for phr in phrases:
@@ -683,7 +682,7 @@ def budget_forecast(request):
     	}
 
         res = directRequest('CreateNewForecast', params)
-        return HttpResponse(str(res))
+        return res
 
 
 def del_budget_forecast(num):
@@ -695,27 +694,33 @@ def del_budget_forecast(num):
 
 def check_budget_forecast():
 
-        res = directRequest('GetForecastList')
+        res = directRequest('GetForecastList', '')
 
         response = ''
         for s in res:
             response += str(s)+"<br>"
 
-        return HttpResponse(response)
+        return response
 
 
-def get_budget_forecast(request):
+def get_budget_forecast(num):
 
-        num = request.POST["num"]
         params = int(num)
 
         res = directRequest('GetForecast', params)
 
-        response = ''
-        for s in res:
-            response += str(s)+"<br>"
+        return res
+'''
+arr = {"phrase":['samsung'], 'geo': [1], "category": []}
 
-        return HttpResponse(response)
+print budget_forecast(arr)
+time.sleep(3)
+print check_budget_forecast()
+time.sleep(3)
+print check_budget_forecast()
+time.sleep(3)
+print check_budget_forecast()
+'''
 
 
 #user data

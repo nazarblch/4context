@@ -31,7 +31,7 @@
                 $.post("/shop/change_cur_cv_ob/",
                         arr,
                         function(data) {
-                            alert(data);
+                           // alert(data);
 
                         }
                 );
@@ -213,23 +213,23 @@
 				arr = {}
 				
 				for(k in cat_selected_syn){
-					arr[k] = cat_selected_syn[k]
+					arr[k] = cat_selected_syn[k].join()
 				}
 				
 				arr['csrfmiddlewaretoken'] = getCookie("csrftoken")
-				arr['cat_keys'] = keys
+				arr['cat_keys'] = keys.join()
 				
 				keys = Object.keys(ven_selected_syn)
-				arr['ven_keys'] = keys
+				arr['ven_keys'] = keys.join()
 				
 				for(k in ven_selected_syn){
-					arr[k] = ven_selected_syn[k]
+					arr[k] = ven_selected_syn[k].join()
 				}
 				
 				$.post("/shop/set_syn/", 
 				       arr,
 				       function(data) {
-					      alert("Data Loaded: " + data);
+					      show_alert("Data Loaded", data);
 				       }
 				 );
 				

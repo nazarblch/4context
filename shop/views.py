@@ -212,7 +212,7 @@ def change_cur_cv_ob(request):
         dbtable = request.POST['dbtable']
 
         if ob.dbtable == "cat":
-            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+            ob.unchecked_words |= set(request.POST["new_unchecked_words"].strip().split("&_&"))
         obname = request.POST["ob_name"]
 
         try:
@@ -232,7 +232,7 @@ def get_syn(request):
         ob = request.session["cur_cv_ob"]
 
         if "new_unchecked_words" in request.POST and ob.dbtable == "cat":
-            ob.unchecked_words |= set(str(request.POST["new_unchecked_words"]).strip().split("&_&"))
+            ob.unchecked_words |= set(request.POST["new_unchecked_words"].strip().split("&_&"))
 
 
 
@@ -337,23 +337,31 @@ def set_syn(request):
 
         shop = request.session["shop"]
 
-        cat_keys = request.POST.getlist('cat_keys')
-        ven_keys = request.POST.getlist('ven_keys')
+        cat_keys = request.POST.get('cat_keys',"").encode("utf-8")
+        if cat_keys != u'' and cat_keys != '': cat_keys = list(cat_keys.strip().split(','))
+        else: cat_keys = []
+
+        ven_keys = request.POST.get('ven_keys', "").encode("utf-8")
+        if ven_keys != u'' and ven_keys != '': ven_keys = list(ven_keys.strip().split(','))
+        else: ven_keys = []
 
         res = ""
-        if len(cat_keys)>0: shop.category_syns.all().delete()
         for k in cat_keys:
             id = int(k)
             obj = Categories.objects.get(id=id)
-            cat_syn_objs = obj.add_synonyms(request.POST.getlist(k))
+            obj.del_synonyms()
+            cat_syn_objs = obj.add_synonyms(request.POST.get(k,"").strip().split(','))
+
             for cat_syn in cat_syn_objs:
                 shop.category_syns.add(cat_syn)
 
-        if len(ven_keys)>0: shop.vendor_syns.all().delete()
+
         for k in ven_keys:
             id = int(k)
             obj = Vendors.objects.get(id=id)
-            ven_syn_objs = obj.add_synonyms(request.POST.getlist(k))
+            obj.del_synonyms()
+            ven_syn_objs = obj.add_synonyms(request.POST.get(k,"").strip().split(','))
+
             for ven_syn in ven_syn_objs:
                 shop.vendor_syns.add(ven_syn)
 

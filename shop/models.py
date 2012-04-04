@@ -34,6 +34,9 @@ class Vendors(models.Model):
             syns = self.vendor_synonyms_set.all()        
             return [s.name for s in syns]
 
+    def del_synonyms(self):
+        self.vendor_synonyms_set.all().delete()
+
 class Vendor_synonyms(models.Model):
     vendor = models.ForeignKey(Vendors)
     name = models.CharField(max_length=100)
@@ -82,6 +85,10 @@ class Categories(models.Model):
         syns = self.category_synonyms_set.all()
         
         return [s.name for s in syns]
+
+
+    def del_synonyms(self):
+        self.category_synonyms_set.all().delete()
         
 
 class Category_synonyms(models.Model):

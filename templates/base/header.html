@@ -1,4 +1,4 @@
-<div id="base_header">
+
 
    <div class="base_header_item">
        self: {{ username }}
@@ -14,9 +14,7 @@
        shop number: {{ shopid }}<br>
        shop name: {{ shopname }}
    </div>
-   <div class="base_header_item">
 
-   </div>
-   <br>
+    {% block header_adds %}
+    {% endblock %}
 
-</div>

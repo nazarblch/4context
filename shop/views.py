@@ -7,7 +7,7 @@ from myproject.agency.models import Clients
 from myproject.shop.xl import *
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404, redirect
 from myproject.yafunc import get_synonyms, wordstat
 from myproject.shop.groupModels import *
 from myproject.shop.groups import *
@@ -16,7 +16,7 @@ from django.utils.encoding import *
 
 from cv_syn.synonyms import *
 from django.utils import simplejson
-
+from myproject.project.views import get_default_info
 
 
 def index(request):
@@ -377,6 +377,13 @@ def kw_phrases(request):
     if 'shop' not in request.session:
         return HttpResponse("Shop hasn't been defined")
 
+
+
+    def_templ_data = get_default_info(request)
+
+    templ_dict = {}
+    templ_dict.update(def_templ_data)
+
     clid = int(request.session['client'])
     cl = Clients.objects.get(id=clid)
     cllogin = cl.login
@@ -384,8 +391,8 @@ def kw_phrases(request):
     shopname = shop.id
 
     if 'category' not in request.session or 'vendor' not in request.session:
-        request.session['vendor'] = shop.vendors.all()[0]
         request.session['category'] = shop.categories.all()[0]
+        request.session['vendor'] = request.session['category'].vendors.all()[0]
 
     vendor = request.session['vendor']
     category = request.session['category']
@@ -406,11 +413,9 @@ def kw_phrases(request):
     Mg = join_groups(Mg)
     Mg = join_groups(Mg)
 
-    return render_to_response("shop/kw_phrases.html", {"cllogin": cllogin,
-                                                        "shop": shopname,
-                                                        "clid": clid,
-                                                        "Mg": Mg,
-                                                         })
+    templ_dict.update({"Mg": Mg, "vendor": VENDOR, "category": CATEGORY})
+
+    return render_to_response("shop/kw_phrases.html", templ_dict)
 
 
 def fix_groups(request):
@@ -566,6 +571,36 @@ def push_model_syns_to_db(request):
 
 
         return  HttpResponse("0")
+
+
+def next_vc(request):
+
+        shop = request.session['shop']
+
+        if 'category' not in request.session or 'vendor' not in request.session:
+            return  HttpResponse("Category or vendor isn't defined")
+        else:
+            ven = request.session['vendor']
+            cat = request.session['category']
+
+            try:
+                vens = cat.vendors.all()
+                for i,v in enumerate(vens):
+                    if v == ven: request.session['vendor'] = vens[i+1]
+
+            except:
+                try:
+                    cats = shop.categories.all()
+                    for i,c in enumerate(cats):
+                        if c == cat: request.session['category'] = cats[i+1]
+
+                except:
+                    del request.session['category']
+
+            return kw_phrases(request)
+
+
+
 
 
 

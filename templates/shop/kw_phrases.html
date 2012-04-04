@@ -214,6 +214,12 @@
         $(this).parent().remove();
     });
 
+    $('#next_vc').live("click", function(event){
+
+        document.location.href = "/shop/next_vc"
+
+    });
+
 
 
 
@@ -241,6 +247,20 @@
 
 {% endblock %}
 
+{% block header %}
+    {{ block.super }}
+{% block header_adds %}
+
+    <div class="base_header_item">
+        vendor: {{ vendor }} <br>
+        category: {{ category }}
+    </div>
+
+{% endblock %}
+{% endblock %}
+
+
+
 
 {% block content %}
 
@@ -255,8 +275,11 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     1.fixgroups; 2.synforall; 3(optional).synforall_sep; 4.show_model_syns; 5.push_model_syns_to_db;
 
-<br>
-<br>
+<br><br>
+
+<input id="next_vc" name="next_vc" type="button" value="Go to the next pair" />
+
+<br><br>
 <div id="groups" style="float:left;">
 	
 	{%math Mg|length "$1" as st %}

@@ -21,6 +21,7 @@ urlpatterns = patterns('myproject.shop',
     (r'^synforall_sep/$', 'views.synforall_sep'),
     (r'^show_model_syns/$', 'views.show_model_syns'),
     (r'^push_model_syns_to_db/$', 'views.push_model_syns_to_db'),
+    (r'^next_vc/$', 'views.next_vc'),
 )
 
 

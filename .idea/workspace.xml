@@ -767,7 +767,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="next vendo_ category switcher in kw_phrases" />
+    <option name="LAST_COMMIT_MESSAGE" value="cat ven syn bug" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -784,8 +784,8 @@
     <MESSAGE value="vc syn stage 1" />
     <MESSAGE value="vc syn updated" />
     <MESSAGE value="New changelist" />
-    <MESSAGE value="cat ven syn bug" />
     <MESSAGE value="next vendo_ category switcher in kw_phrases" />
+    <MESSAGE value="cat ven syn bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

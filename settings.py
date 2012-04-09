@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'myproject.project',
     'myproject.agency',
     'myproject.tests',
+    'myproject.ya_crawl',
     'pymorphy',
 
     # Uncomment the next line to enable the admin:

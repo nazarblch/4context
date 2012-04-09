@@ -722,6 +722,41 @@ time.sleep(3)
 print check_budget_forecast()
 '''
 
+def crawl_budget_forecast(phrases):
+
+    try:
+        from myproject.ya_crawl.spiders.ya_crawl_spyder import Ya_crawlSpider
+    except:
+        from ya_crawl.spiders.ya_crawl_spyder import Ya_crawlSpider
+
+    from scrapy import signals
+    from scrapy.xlib.pydispatch import dispatcher
+
+    def catch_item(sender, item, **kwargs):
+        print "Got:", item
+
+    dispatcher.connect(catch_item, signal=signals.item_passed)
+
+    # shut off log
+    from scrapy.conf import settings
+    settings.overrides['LOG_ENABLED'] = False
+
+    # set up crawler
+    from scrapy.crawler import CrawlerProcess
+
+    crawler = CrawlerProcess(settings)
+    #crawler.install()
+    crawler.configure()
+
+    # schedule spider
+    Ya_crawl = Ya_crawlSpider(phrases, "lubanazar", "alebastrov222")
+    crawler.crawl(Ya_crawl)
+
+    # start engine scrapy/twisted
+    print "STARTING ENGINE"
+    crawler.start()
+    print "ENGINE STOPPED"
+    return Ya_crawl.res
 
 #user data
 #=========================================================
@@ -839,3 +874,4 @@ print get_clients("genromix")
 
 
 #print wordstat(["телефоны samsung", "mobile самсунг", "мобильные телефоны samsung"], showsmax=20000, showsmin=10, geos = [1,2])
+#print crawl_budget_forecast(["телефоны samsung", "mobile самсунг", "мобильные телефоны samsung"])

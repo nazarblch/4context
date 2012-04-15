@@ -2,7 +2,7 @@
 def max_ctr(product):
     return product["ctr"]/product["price"]
 
-def push_into_pack(products, prace_names, budget, goal_func = max_ctr):
+def push_into_pack(products, price_names, budget, goal_func = max_ctr):
     separated_pr = []
 
     for pr_num,prod in enumerate(products):
@@ -17,7 +17,11 @@ def push_into_pack(products, prace_names, budget, goal_func = max_ctr):
         max_id = None
 
         for pr_num,prod in enumerate(separated_pr):
+            t = goal_func(prod)
             if t > max:
-                max = dfsdfsfgdgdfg
+                max = t
+                max_id = pr_num
+
+
 
 

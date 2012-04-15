@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Django default" product="MySQL" version="5.1.58-1ubuntu1" jdbc-version="4.0" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="f624b01a-4cf4-44da-9e75-eecf4d7a3124">
+  <data-source source="LOCAL" name="Django default" product="MySQL" version="5.1.61-0ubuntu0.11.10.1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="f624b01a-4cf4-44da-9e75-eecf4d7a3124" case-sensitive="true">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -296,6 +296,8 @@
       <primary-key name="PRIMARY" columns="id" />
       <index name="project_company_b6620684" unique="false" columns="project_id" />
     </table>
+    <table name="project_keyword" schema="" catalog="django_database" type="TABLE" />
+    <table name="project_keyword_product" schema="" catalog="django_database" type="TABLE" />
     <table name="project_project" schema="" catalog="django_database" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="client_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
@@ -336,6 +338,7 @@
       <primary-key name="PRIMARY" columns="id" />
       <index name="shop_params_bb420c12" unique="false" columns="product_id" />
     </table>
+    <table name="shop_product_synonyms" schema="" catalog="django_database" type="TABLE" />
     <table name="shop_products" schema="" catalog="django_database" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="shop_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />

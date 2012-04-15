@@ -223,7 +223,7 @@ class ShopInfo(models.Model):
             return True, res_arr  
 
 
-                      
+
 
 class Products(models.Model):
     shop = models.ForeignKey(ShopInfo)

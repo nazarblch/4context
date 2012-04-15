@@ -10,6 +10,7 @@ urlpatterns = patterns('myproject.project',
 
     (r'^$', 'views.index'),
     (r'^sort_kw_phr/$', 'views.sort_kw_phr'),
+    (r'^keywords/$', 'views.keyword'),
 
 )
 

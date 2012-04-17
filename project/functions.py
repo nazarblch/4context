@@ -23,5 +23,9 @@ def push_into_pack(products, price_names, budget, goal_func = max_ctr):
                 max_id = pr_num
 
 
+        if max_id is None: break
+
+        pr = separated_pr[max_id]
+
 
 
